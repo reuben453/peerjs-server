@@ -1,6 +1,6 @@
 {
   "name": "peer",
-  "version": "0.2.9.1",
+  "version": "0.2.9",
   "description": "PeerJS server component - custom",
   "main": "lib/index.js",
   "bin": {
@@ -10,24 +10,26 @@
     "type": "git",
     "url": "git://github.com/peers/peerjs-server.git"
   },
-  "author": "Michelle Bu, Eric Zhang, Reuben",
+  "author": "Michelle Bu, Eric Zhang",
   "license": "MIT",
   "dependencies": {
     "body-parser": "~1.10.2",
-    "express": "^4.9.8",
-    "optimist": "~0.6.1",
-    "ws": "~0.4.25",
+    "cookie-parser": "~1.3.3",
+    "cookie-session": "^1.1.0",
     "cors": "~2.5.0",
-    "passport-local-mongoose": "~1.0.0",
-    "passport-local": "~1.0.0",
-    "passport": "~0.2.1",
+    "errorhandler": "~1.3.2",
+    "express": "^4.9.8",
+    "express-session": "~1.10.1",
+    "jade": "^1.9.1",
+    "method-override": "~2.3.1",
     "mongodb": "~1.4.29",
     "mongoose": "~3.8.22",
-    "cookie-parser": "~1.3.3",
-    "method-override": "~2.3.1",
     "morgan": "~1.5.1",
-    "express-session": "~1.10.1",
-    "errorhandler": "~1.3.2"
+    "optimist": "~0.6.1",
+    "passport": "~0.2.1",
+    "passport-local": "~1.0.0",
+    "passport-local-mongoose": "~1.0.0",
+    "ws": "~0.4.25"
   },
   "devDependencies": {
     "expect.js": "*",

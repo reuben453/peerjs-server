@@ -1,5 +1,6 @@
 var passport = require('passport');
 var Account = require('./models/account');
+var util = require('./lib/util');
 
 module.exports = function (app) {
 
@@ -7,7 +8,7 @@ module.exports = function (app) {
       res.render('index', { user : req.user });
   });
 
-  app.get('/register', function(req, res) {
+  /*app.get('/register', util.requireAuth('/register', true), function(req, res) {
       res.render('register', { });
   });
 
@@ -21,20 +22,31 @@ module.exports = function (app) {
           res.redirect('/peerjs');
         });
     });
-  });
+  });*/
 
-  app.get('/login', function(req, res) {
+  /*app.get('/login', function(req, res) {
+      
+      res.render('login', { user : req.user });
+  });*/
+
+  app.get('/login1', function(req, res) {
       res.render('login', { user : req.user });
   });
 
-  app.post('/login', passport.authenticate('local'), function(req, res) {
-      res.redirect('/peerjs');
-  });
+  /*app.post('/login', passport.authenticate('local'), function(req, res, next) {
+      if (req.session.returnTo) {
+        res.redirect(req.session.returnTo);
+        req.session.returnTo = null;
+      }
+      else {
+        res.redirect('/peerjs');
+      }
+  });*/
 
-  app.get('/logout', function(req, res) {
+  /*app.get('/logout', function(req, res) {
       req.logout();
       res.redirect('/');
-  });
+  });*/
 
   app.get('/ping', function(req, res){
       res.send("pong!", 200);
